@@ -17,7 +17,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Version">
-                <param name="android-package" value="org.apache.cordova.plugin.Version.Version" />
+                <param name="android-package" value="org.apache.cordova.plugin.Version" />
             </feature>
         </config-file>
 
