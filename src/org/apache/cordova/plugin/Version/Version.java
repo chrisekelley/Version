@@ -6,18 +6,22 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 
-import org.apache.cordova.api.CallbackContext;
-import org.apache.cordova.api.CordovaPlugin;
-import org.apache.cordova.api.PluginResult;
-import org.apache.cordova.api.PluginResult.Status;
+import android.util.Log;
+
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.PluginResult;
+import org.apache.cordova.PluginResult.Status;
 
 public class Version extends CordovaPlugin {
 
+    private static final String TAG = "VersionCordovaPlugin";
     public final String ACTION_GET_VERSION_NAME = "GetVersionName";
     public final String ACTION_GET_VERSION_CODE = "GetVersionCode";
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
+        Log.d(TAG,"Inside Version plugin.");
         boolean result = false;
         PackageManager packageManager = this.cordova.getActivity().getPackageManager();
         if(action.equals(ACTION_GET_VERSION_CODE)) {
@@ -28,6 +32,7 @@ public class Version extends CordovaPlugin {
             }
             catch (NameNotFoundException nnfe) {
                 result = false;
+                Log.d(TAG,"NameNotFoundException: ACTION_GET_VERSION_CODE");
                 callbackContext.success(nnfe.getMessage());
             }
         }
@@ -39,6 +44,7 @@ public class Version extends CordovaPlugin {
             }
             catch (NameNotFoundException nnfe) {
                 result = false;
+                Log.d(TAG,"NameNotFoundException: ACTION_GET_VERSION_NAME");
                 callbackContext.success(nnfe.getMessage());
             }
         

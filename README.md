@@ -1,23 +1,12 @@
-# Version plugin for Phonegap #
+# Version plugin for Cordova 3.x #
 
 Version allows you to get, display and use the version name and version code of your PhoneGap application.
 
+This is for Cordova 3.x.  Use the version at https://github.com/gcatalfamo/Version for older versions of Cordova/Phonegap.
+
 ## Adding the Plugin to your project ##
 
-Using this plugin requires [Android PhoneGap](http://github.com/phonegap/phonegap-android).
-
-1. To install the plugin, move www/version.js to your project's www folder and include a reference to it in your html file after phonegap.js.
-
-    &lt;script type="text/javascript" charset="utf-8" src="phonegap.js"&gt;&lt;/script&gt;<br/>
-    &lt;script type="text/javascript" charset="utf-8" src="version.js"&gt;&lt;/script&gt;
-    
-2. Create a directory within your project called "src/com/phonegap/plugins/" and move Version.java into it.
-
-3. In your res/xml/plugins.xml file add the following line:
-
-    &lt;plugin name="Version" value="com.phonegap.plugins.Version"/&gt;
-
-    CAUTION: Using PhoneGap ≥ 2.0 (aka Cordova) you have to add this line into res/xml/config.xml in the &lt;plugins&lt;-section. The plugins.xml is no longer supported. The plugins are all located in the config.xml
+$ cordova plugin add https://github.com/chrisekelley/Version.git
 
 ## Using the plugin ##
 
@@ -27,12 +16,12 @@ The plugin creates the object `window.plugins.version`.  To use, call one of the
 		function(version_code) {
 			//do something with version_code
 			console.log(version_code);
-			
+
 		},
 		function(errorMessage) {
 			//do something with errorMessage
 			console.log(errorMessage);
-			
+
 		}
 	);
 
@@ -40,17 +29,21 @@ The plugin creates the object `window.plugins.version`.  To use, call one of the
 		function(version_name) {
 			//do something with version_name
 			console.log(version_name);
-			
+
 		},
 		function(errorMessage) {
 			//do something with errorMessage
 			console.log(errorMessage);
-			
+
 		}
 	);
 
 
 ## RELEASE NOTES ##
+
+### Sept 3, 2013 ###
+
+* Update to Cordova 3.0
 
 ### May 8th, 2013 ###
 
