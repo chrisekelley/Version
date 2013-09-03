@@ -1,4 +1,4 @@
-package org.apache.cordova.plugin.Version;
+package org.apache.cordova.plugin.version;
 
 import org.json.JSONArray;
 
