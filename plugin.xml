@@ -21,6 +21,6 @@
             </feature>
         </config-file>
 
-        <source-file src="src/org/apache/cordova/plugin/Version/Version.java" target-dir="src/org/apache/cordova/plugin/Version" />
+        <source-file src="src/android/Version.java" target-dir="src/org/apache/cordova/plugin/Version" />
     </platform>
 </plugin>
