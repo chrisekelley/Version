@@ -21,7 +21,7 @@ public class Version extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
-        Log.d(TAG,"Inside Version plugin.");
+        //Log.d(TAG,"Inside Version plugin.");
         boolean result = false;
         PackageManager packageManager = this.cordova.getActivity().getPackageManager();
         if(action.equals(ACTION_GET_VERSION_CODE)) {
