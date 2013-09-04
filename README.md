@@ -4,6 +4,18 @@ Version allows you to get, display and use the version name and version code of 
 
 This is for Cordova 3.x.  Use the version at https://github.com/gcatalfamo/Version for older versions of Cordova/Phonegap.
 
+This plugin was born after gcatalfamo asked (and answered) this StackOverflow question:
+http://stackoverflow.com/questions/15178468/phonegap-android-get-the-app-version-code
+
+If you find this plugin useful, feel free to upvote the question so that more people will find it.
+
+If you are seeking to use this version info to display a "Download now" notification to update your application, you are in luck!
+There is some really helpful code from gcatalfamo in [issue 2](https://github.com/gcatalfamo/Version/issues/2) that scopes it out really well.
+I adapted that code and added support for notifications and download from a non Google Play store server.
+That code is in [example.md](https://raw.github.com/chrisekelley/Version/master/example.md).
+
+Thanks a lot gcatalfamo!
+
 ## Adding the Plugin to your project ##
 
 $ cordova plugin add https://github.com/chrisekelley/Version.git
